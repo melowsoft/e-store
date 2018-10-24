@@ -1,0 +1,52 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">Add Product</div>
+    <form class="ui form" action="/productdetail" method="POST">
+
+    <div class="field">
+    <label for="title">Title</label>
+    <input type="text" name="product[title]" placeholder="title">    
+    </div>
+
+    <div class="field">
+    <label for="description">Description</label>
+    <textarea name="product[desc]" placeholder="description" rows="10" cols="10"></textarea>
+       
+    </div>
+
+    <div class="field">
+    <label for="price">Price</label>
+    <input type="text" name="product[price]" placeholder="price">        
+    </div>
+
+    <div class="field">
+    <label for="category">Category</label>
+    <input type="text" name="product[category]" placeholder="category">
+    </div>
+
+    
+
+    <div class="field">
+    <label for="image">Image</label>
+    <input type="file" name="product[image]" placeholder="image" id="img">        
+    </div>
+
+    <div class="field">
+    <label for="color" >Color</label>
+       
+    <select name="color" id="color-select">
+    <option value="">--Select a Color--</option>
+    <option value="blue">blue</option>
+    <option value="green">green</option>ellow
+    <option value="red">red</option>
+    <option value="orange">orange</option>
+    <option value="yellow">yellow</option>
+    </select>
+            
+    </div>
+    </form>
+    
+</div>
+
+<% include ./partials/footer %>

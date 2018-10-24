@@ -1,0 +1,40 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add ejs express
+
+PATH: 
+  /home/melowsoft/anaconda3/bin:/home/melowsoft/.local/bin:/home/melowsoft/anaconda3/bin:/home/melowsoft/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.10.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/express: ETIMEDOUT
+      at Timeout._onTimeout (/usr/share/yarn/lib/cli.js:138128:19)
+      at ontimeout (timers.js:482:11)
+      at tryOnTimeout (timers.js:317:5)
+      at Timer.listOnTimeout (timers.js:277:5)
+
+npm manifest: 
+  {
+    "name": "rest_api",
+    "version": "1.0.0",
+    "description": "a rest api to serve for a e-commerce platform",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Anthony Okpako",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
