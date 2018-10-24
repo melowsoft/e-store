@@ -2,34 +2,34 @@
 
 <div class="ui main text container segment">
     <div class="ui huge header">Add Product</div>
-    <form class="ui form" action="/productdetail" method="POST">
+    <form class="ui form" action="/product" method="POST">
 
     <div class="field">
-    <label for="title">Title</label>
-    <input type="text" name="product[title]" placeholder="title">    
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="title">    
     </div>
 
     <div class="field">
     <label for="description">Description</label>
-    <textarea name="product[desc]" placeholder="description" rows="10" cols="10"></textarea>
+    <textarea name="desc" placeholder="description" rows="10" cols="10"></textarea>
        
     </div>
 
     <div class="field">
     <label for="price">Price</label>
-    <input type="text" name="product[price]" placeholder="price">        
+    <input type="text" name="price" placeholder="price">        
     </div>
 
     <div class="field">
     <label for="category">Category</label>
-    <input type="text" name="product[category]" placeholder="category">
+    <input type="text" name="category" placeholder="category">
     </div>
 
     
 
     <div class="field">
     <label for="image">Image</label>
-    <input type="file" name="product[image]" placeholder="image" id="img">        
+    <input type="text" name="image" placeholder="image URL" id="img">        
     </div>
 
     <div class="field">
@@ -45,6 +45,8 @@
     </select>
             
     </div>
+
+    <button class="ui black basic button">Submit</button>
     </form>
     
 </div>

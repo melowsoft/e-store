@@ -3,6 +3,8 @@ const path = require("path");
 const mongoose = require("mongoose");
 const router = require("./routes/router");
 const keys = require("./config/keys");
+const bodyParser = require("body-parser");
+
 const app = express();
 
 //Database Connection to MongoDB
@@ -12,6 +14,9 @@ db.on("error", console.error.bind(console.log, "connection error:"));
 db.once("open", () => {
   console.log("Connected to MongoDB");
 });
+
+//Body parser setup
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //View Engine  Setup
 app.set("views", path.join(__dirname, "views"));
