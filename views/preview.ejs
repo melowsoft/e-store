@@ -1,9 +1,31 @@
 <% include ./partials/header %>
 
-<div class="ui main text container segment">
-    <div class="ui huge header">Product Preview</div>
-   
+<div class="ui flex  main text container">
+<h1>Details</h1>
+<div class="flex">
     
+
+<div class="flex-item">
+<img src="/<%= product.image %>" style="width: 300px; height: 300px">
+</div>
+
+    <div class="flex-item">
+    <h1><%= product.name %></h1>
+    <h5><%= product.category %></h5>
+    <p><%= product.desc %></p>
+
+    <div style="width:30px;height:30px;background-color: <%= product.color %>">
+        
+    </div>
+
+    <h2 class="ui sub header">
+    Price
+  </h2>
+      ₦<%= product.price %>.00
+    
+    </div>
+   
+    </div>
 </div>
 
 <% include ./partials/footer %>

@@ -1,3 +1,16 @@
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+    cb(null, "./uploads");
+  },
+  filename: function(req, file, cb) {
+    cb(null, file.originalname);
+  }
+});
+
+const upload = multer({ storage });
+
 //Import Products model
 const Products = require("../models/products");
 
@@ -42,13 +55,12 @@ module.exports = function(app) {
   });
 
   //POST New product route
-  app.post("/product", (req, res) => {
+  app.post("/product", upload.single("image"), (req, res) => {
     let name = req.body.name;
     let desc = req.body.desc;
     let price = req.body.price;
     let category = req.body.category;
-
-    let image = req.body.image;
+    let image = req.file.path;
     let color = req.body.color;
 
     let product = new Detail({
@@ -59,6 +71,7 @@ module.exports = function(app) {
       image,
       color
     });
+    console.log(product);
 
     product.save(err => {
       if (err) return console.log(err);

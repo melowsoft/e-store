@@ -5,3 +5,14 @@ i.icon {
 .container.main {
     margin-top: 7.0em;
 }
+
+.flex{
+    
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.flex-item {
+    padding: 10px
+}
